@@ -3,9 +3,9 @@ import validateSchema from "../middlewares/middlewares.js";
 import { gameSchema } from "../schemas/schemas.js";
 import { getGames, postGames } from "../controllers/controllers.js";
 
-const router = Router();
+const gamesRouter = Router();
 
-router.get("/games", getGames);
-router.post("/games", validateSchema(gameSchema), postGames);
+gamesRouter.get("/games", getGames);
+gamesRouter.post("/games", validateSchema(gameSchema), postGames);
 
-export default router;
+export default gamesRouter;

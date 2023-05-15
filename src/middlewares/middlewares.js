@@ -6,6 +6,6 @@ export default function validateSchema(schema){
             const errors = validation.error.detail.map((x) => x.message);
             return res.status(400).send({errors});
         }
-        next();
+        next()
     }
 }
